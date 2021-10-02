@@ -13,34 +13,45 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    //Calls functions that get the information and then pass into the result class to
+    //create products into one list called result. Then it prints out the final answer
+    //using the findname function.
+    public static void main(String[] args) throws FileNotFoundException {
         Gson gson = new Gson();
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader("src/main/java/ex44/exercise44_input.json"));
-            Result result = gson.fromJson(br,Result.class);
-            Product p = findName(result);
-            System.out.format("Name: %s\nPrice: %.2f\nQuantity: %d",p.getName(),p.getPrice(),p.getQuantity());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        BufferedReader br = new BufferedReader(new FileReader("src/main/java/ex44/exercise44_input.json"));
+        Result result = gson.fromJson(br,Result.class);
+        Product p = findName(result);
+        System.out.format("Name: %s\nPrice: %.2f\nQuantity: %d",p.getName(),p.getPrice(),p.getQuantity());
     }
 
+    //Goes through every product and checks if the name the user inputted is in the
+    //list of products
     public static Product findName(Result result) {
+        Product p;
         while(true){
             String name = scanIn("What is the product name? ");
-            for(Product p: result.getProducts()) {
-                if (p.getName().equals(name)) {
-                    return p;
-                }
-            }
-                System.out.println("Sorry, that product was not found in our inventory.");
+            p = ifEquals(result,name);
+            if(p != null)
+                break;
+            System.out.println("Sorry, that product was not found in our inventory.");
         }
+        return p;
     }
 
+    //simple scanin function that gets userinput
     public static String scanIn(String s) {
         Scanner myInput = new Scanner(System.in);
         System.out.print(s);
         return myInput.nextLine();
+    }
+
+    //checks if the name corresponds to one of the products
+    public static Product ifEquals(Result result, String name) {
+        for(Product p: result.getProducts()) {
+            if (p.getName().equals(name)) {
+                return p;
+            }
+        }
+        return null;
     }
 }
