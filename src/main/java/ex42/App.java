@@ -5,43 +5,24 @@ package ex42;
  *  Copyright 2021 Rithvik Dinesh
  */
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class App {
-    public static void main(String[] args) {
-        List<Person> peopleList = readfromCSV("src/main/java/ex42/exercise42_input.txt");
-        System.out.println("Last      First     Salary");
-        System.out.println("---------------------------");
+    //Main method that will call the readfunction to read from the CSV and send in the path,
+    //then it will call the printer function and pass in the List
+    public static void main(String[] args) throws IOException {
+        List<Person> peopleList = new ArrayList<>();
+        readfromCSV reader = new readfromCSV();
+        peopleList = reader.readIn("src/main/java/ex42/exercise42_input.txt", peopleList);
         printerTime(peopleList);
     }
 
-    public static List<Person> readfromCSV(String filename) {
-        List<Person> thePerson = new ArrayList<>();
-        Path pathToFile = Paths.get(filename);
-        try (BufferedReader br = Files.newBufferedReader(pathToFile)) {
-            String line = br.readLine();
-            while(line != null)
-            {
-                String[] items = line.split(",");
-                Person person = Person.createPerson(items);
-                thePerson.add(person);
-                line = br.readLine();
-            }
-        } catch (IOException e) {
-            System.out.println("An error has occurred");
-            e.printStackTrace();
-            System.exit(1);
-        }
-        return thePerson;
-    }
-
+    //Prints each part of the person class in table format
     public static void printerTime(List<Person> peopleList) {
+        System.out.println("Last      First     Salary");
+        System.out.println("---------------------------");
         for (Person p: peopleList) {
             System.out.format("%-10s",p.getFirstName());
             System.out.format("%-10s",p.getLastName());
