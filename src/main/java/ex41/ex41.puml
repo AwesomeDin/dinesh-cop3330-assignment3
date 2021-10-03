@@ -1,24 +1,23 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class AbstractList
+App <|-- PrintList
+App <|-- ReadFile
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class App {
++main()
++filterNames()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class PrintList {
++printOut()
++printEntry()
+}
+
+class ReadFile {
++addPeople ()
++readEntry()
 }
 
 @enduml

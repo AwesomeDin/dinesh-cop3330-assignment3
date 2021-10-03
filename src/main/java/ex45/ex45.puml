@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+App <|-- WordFinder
+
+
+class App {
++main()
++scanIn()
+}
+
+class WordFinder {
++replaceText()
++checkIn()
+}
+
+@enduml

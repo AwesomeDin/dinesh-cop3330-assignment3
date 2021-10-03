@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+App <|-- createFile
+App <|-- createFolder
+
+
+class App {
++main()
++scanIn()
++folderMethod()
++printingTime()
+}
+
+class createFile {
++newFile()
+}
+
+class createFolder {
++newFolder()
+}
+
+@enduml

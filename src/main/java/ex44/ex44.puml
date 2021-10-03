@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+App <|-- Result
+App <|-- Product
+
+
+class App {
++main()
++scanIn()
++findName()
++ifEquals()
+}
+
+class Result {
+-products
++getProducts()
++setProducts()
+}
+
+class Product {
+-name
+-price
+-quantity
++getName()
++setName()
++getPrice()
++setPrice()
++getQuantity()
++setQuantity()
+}
+
+@enduml

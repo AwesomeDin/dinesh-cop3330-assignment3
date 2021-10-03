@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+App <|-- WordFrequency
+
+
+class App {
++main()
++filterName()
++printerTime()
+}
+
+class WordFrequency {
++countFrequency()
++counterCheck()
+}
+
+
+@enduml
