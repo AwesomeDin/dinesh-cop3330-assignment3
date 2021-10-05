@@ -16,20 +16,21 @@ public class WordFinder {
         Path toPath = Paths.get(tofileName);
         BufferedWriter writer = Files.newBufferedWriter(toPath, Charset.defaultCharset());
         Scanner myInput = new Scanner(path,Charset.defaultCharset());
-        checkIn(myInput,find,replace,writer);
+        int x = checkIn(myInput,find,replace,writer);
         myInput.close();
         writer.close();
     }
 
     //Goes through every word in the textfile to check if there is the target word to replace, once it replaces
-    //it will write that line to the new file.
-    public static void checkIn(Scanner myInput, String find, String replace, BufferedWriter writer) throws IOException {
+    //it will write that line to the new file. returns 1 to show its successful.
+    public static int checkIn(Scanner myInput, String find, String replace, BufferedWriter writer) throws IOException {
         while (myInput.hasNextLine()) {
             String line = myInput.nextLine();
             line = line.replaceAll(find,replace);
             writer.write(line);
             writer.newLine();
         }
+        return 1;
     }
 
 }
