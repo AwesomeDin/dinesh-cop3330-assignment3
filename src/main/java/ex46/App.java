@@ -43,4 +43,15 @@ public class App {
             System.out.println();
         }
     }
+
+    //Pseudocode Plan
+
+    //Main, create a hashmap for word then count of the words
+    //call the wordfrequency class and printer method
+
+    //filterTime, use some kind of Object array so we can sort the hashmaps
+    //Use some kind of filter like comparators to sort the object array
+
+    //printerTime, for every object print the key (name) and value
+    //but using stars.
 }

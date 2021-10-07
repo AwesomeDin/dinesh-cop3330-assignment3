@@ -26,4 +26,12 @@ public class WordFrequency {
             return count+1;
         return 1;
     }
+
+    //Pseudocode Plan
+
+    //countFrequency, use .hasNext()
+    //while there is still a line we add the count
+
+    //counterCheck, intializes count
+
 }
