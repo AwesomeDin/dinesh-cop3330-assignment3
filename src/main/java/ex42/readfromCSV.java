@@ -28,4 +28,13 @@ public class readfromCSV {
         }
         return thePerson;
     }
+
+    //Pseudocode Plan
+
+    //readIn, use Path to get the file
+    //use bufferedreader to read in each line of the file
+
+    //scanIn, split the items into an array and create a person
+    //return the list back to readIn
+
 }

@@ -31,4 +31,13 @@ public class App {
         }
     }
 
+    //Pseudocode Plan
+
+    //Main, create a list of People
+    //Use a class to read from the file
+    //Use a method to print everything
+
+    //printerTime, print the table for every person
+
+
 }

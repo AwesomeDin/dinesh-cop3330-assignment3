@@ -24,4 +24,11 @@ public class App {
         System.out.print(s);
         return myInput.nextLine();
     }
+
+    //Pseudocode Plan
+
+    //Main, get the name of the output file
+    //call wordfinder class to replace the word and create a new file
+
+    //scanIn, create a method to scan user input
 }

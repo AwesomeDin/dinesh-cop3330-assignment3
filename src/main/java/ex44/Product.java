@@ -36,4 +36,8 @@ public class Product {
         this.quantity = quantity;
     }
 
+    //Pseudocode Plan
+
+    //creates setters and getters for name,price and quantity
+
 }

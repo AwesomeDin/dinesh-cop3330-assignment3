@@ -24,4 +24,13 @@ public class ReadFile {
         nameList.add(data);
         return nameList;
     }
+
+    //Pseudocode Plan
+
+    //readEntry, use File to get the path we need to read
+    //Check each line and add to a list
+    //return list
+
+    //addPeople, add in the data to the list
+    //return list
 }

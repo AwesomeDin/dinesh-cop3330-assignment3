@@ -54,4 +54,14 @@ public class App {
         }
         return null;
     }
+
+    //Pseudocode Plan
+
+    //Main,use Gson and Bufferedwriter for the file
+    //use result class to put the json info into product objects
+
+    //scanIn, simple method to scan user input
+
+    //ifEquals, method to check if that product exists in the
+    //result list
 }

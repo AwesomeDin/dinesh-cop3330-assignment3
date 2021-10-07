@@ -23,7 +23,7 @@ public class App {
      }
 
      //Filtering class, will use a comparator to get it down more efficiently and return
-    //the arraylist back to the main so it can be printed
+    //the arraylist back to the main, so it can be printed
      public static ArrayList<String> filterNames(ArrayList<String> nameList) {
          Collections.sort(nameList, new Comparator<String>() {
              public int compare(String o1, String o2) {
@@ -32,4 +32,15 @@ public class App {
          });
          return nameList;
      }
+
+     //Pseudocode Plan
+
+    //Main, create an arraylist
+    //Use reader to get the list from reader class
+    //Use filternames method in the main class
+    //Send list to the printer class
+
+    //filterNames, use some kind of sorting algo
+    //Possible options include Collections and Array libraries
+    //Send the list back to main
 }

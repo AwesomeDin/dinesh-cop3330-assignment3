@@ -47,6 +47,16 @@ public class Person {
         String salary = data[2];
         return new Person(firstName,lastName,salary);
     }
+
+    //Pseudocode Plan
+
+    //Constructor that allows you to set first,last,salary
+
+    //Set up setters and getters for
+    //every single data point (first,last,salary)
+
+    //createPerson, gets data from the reader class
+    //creates a new person using data
 }
 
 

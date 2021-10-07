@@ -33,4 +33,14 @@ public class WordFinder {
         return 1;
     }
 
+    //Pseudocode Plan
+
+    //replaceText, get the path from and to for the files
+    //Use bufferedwriter to the write to the new file
+
+    //checkIn, if the old file still had a line
+    //check if that line has the word to replace and then
+    //write to the new file
+    //use the replaceall method
+
 }

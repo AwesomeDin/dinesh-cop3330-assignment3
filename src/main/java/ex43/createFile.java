@@ -12,4 +12,11 @@ public class createFile {
         bw.write(html);
         bw.close();
     }
+
+    //Pseudocode Plan
+
+    //newFile, creates new file
+    //uses name and author in the string for the html file
+    //Use bufferedwriter to write to the file
+
 }

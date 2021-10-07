@@ -15,4 +15,9 @@ public class Result {
         this.products = products;
     }
 
+    //Pseudocode Plan
+
+    //Create a products list
+    //Setters and getters for the list of products
+
 }

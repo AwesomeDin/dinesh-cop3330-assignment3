@@ -51,4 +51,17 @@ public class App {
         if(CSS == true)
             System.out.println("Created ./website/" + name +"/css/");
     }
+
+    //Pseudocode Plan
+
+    //Main,scan in the information for the name,author and folders
+    //call createfile class and createfolder class if needed
+    //call method to print the creations
+
+    //scanIn, some sort of simple scanin function
+
+    //Something to check if the user said Y or N to the folder
+
+    //printingTime, print all the creations depending on what they did
+
 }

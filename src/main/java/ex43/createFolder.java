@@ -10,4 +10,10 @@ public class createFolder {
         File f1 = new File(directory);
         f1.mkdir();
     }
+
+    //Pseudocode Plan
+
+    //newFolder, use file and mkdir to create a new directory
+    //take in the name of whether it is js or css
+
 }
